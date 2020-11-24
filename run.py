@@ -72,7 +72,7 @@ def main():
     print('\n')
     print('\n')
     print('Welcome to')+('Oryggi')+(' your password locker.')
-    print('What is your name?'))
+    print('What is your name?')
     username=input()
     print('\n')
     print(f"Hello {username}, complete the following  to create your new account with us")
@@ -86,25 +86,25 @@ def main():
     password=input()
     
     save_users(create_users(username,password))
-        print('\n')
-        print(f"Hello {username}, Your account has been created succesfully!")
-        print(f"Your password is:{password}")
-        print('\n')
+    print('\n')
+    print(f"Hello {username}, Your account has been created succesfully!")
+    print(f"Your password is:{password}")
+    print('\n')
    
-     print("Enter your User name and your Password to log in:")
-        username = input("username: ")
-        password = input("password: ")
+    print("Enter your User name and your Password to log in:")
+    username = input("username: ")
+    password = input("password: ")
 
-        if login_users(username,password) == None:
-            print('\n')
-            print("Please try again")
-            print('\n')
+    if login_users(username,password) == None:
+        print('\n')
+        print("Please try again")
+        print('\n')
        
-        else:
-            login_users(username,password)
-            print('\n')
-            print(f"Hello {username}. Welcome To Oryggi")
-            print('\n')
+    else:
+        login_users(username,password)
+        print('\n')
+        print(f"Hello {username}. Welcome To Oryggi")
+        print('\n')
         
     while True:
         print("Use these short codes:")
@@ -114,10 +114,10 @@ def main():
         print('\n')
 
         if short_code == 'cp':
-                print('New Credential','underlined'))
-                print('Account name '))
+                print('New Credential','underlined')
+                print('Account name ')
                 account_name=input()
-                print('Username '))
+                print('Username ')
                 account_username=input()
                 print('\n')
          
