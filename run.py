@@ -67,3 +67,28 @@ def credential_exists(acccount_username):
     """
     return Credentials.credential_exist(account_username)
 
+def main():
+    tprint("Oryggi")
+    print('\n')
+    print('\n')
+    print('Welcome to')+('Oryggi')+(' your password locker.')
+    print('What is your name?'))
+    username=input()
+    print('\n')
+    print(f"Hello {username}, complete the following  to create your new account with us")
+    print('\n')
+    
+    print("First Name")
+    first_name=input()
+    print("Last Name")
+    last_name=input()
+    print("Enter password")
+    password=input()
+    
+    save_users(create_users(username,password))
+        print('\n')
+        print(f"Hello {username}, Your account has been created succesfully!")
+        print(f"Your generated password is:{password}")
+        print('\n')
+
+
