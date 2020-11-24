@@ -120,15 +120,4 @@ def main():
                 print('Username '))
                 account_username=input()
                 print('\n')
-          while True:
-                print("-Type your own password:   YP\n-Generate random Password: GP")
-                password_Choice = input().lower().strip()
-
-                if password_Choice == 'yp':
-                    password = input("Enter Your Own Password\n")
-                    break
-
-                
-                elif password_Choice == 'gp':
-                    password = password_generates()
-                    break
+         
