@@ -91,7 +91,7 @@ class TestUser(unittest.TestCase):
         '''
         method that returns a list of all credentials saved
         '''
-        self.assertEqual(credentials.display_all_credential(),Credentials.credentials_list)
+        self.assertEqual(Credentials.display_all_credential(),Credentials.credentials_list)
 
 
     def test_password_generate(self):

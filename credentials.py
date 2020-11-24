@@ -1,3 +1,7 @@
+import string
+import random
+from user import User
+
 class Credentials:
     """
     class that generates new instances of accounts
