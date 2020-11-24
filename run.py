@@ -94,8 +94,7 @@ def main():
      print("Enter your User name and your Password to log in:")
         username = input("username: ")
         password = input("password: ")
-        
-        
+
         if login_users(username,password) == None:
             print('\n')
             print("Please try again")
@@ -113,3 +112,11 @@ def main():
         print("To create a new credential:    NC\nDisplay Credentials:        DC\nFind a credential:          FC\nDelete credential:          DL\nGenerate a random password: GP\nExit the application:       EX \n")
         short_code = input().lower()
         print('\n')
+
+        if short_code == 'cp':
+                print('New Credential','underlined'))
+                print('Account name '))
+                account_name=input()
+                print('Username '))
+                account_username=input()
+                print('\n')
