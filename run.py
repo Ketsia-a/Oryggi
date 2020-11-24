@@ -66,3 +66,4 @@ def credential_exists(acccount_username):
     Function that checks if a credential exists and return true or false.
     """
     return Credentials.credential_exist(account_username)
+
