@@ -110,14 +110,77 @@ def main():
         print("Use these short codes:")
         print('\n')
         print("To create a new credential:    NC\nDisplay Credentials:        DC\nFind a credential:          FC\nDelete credential:          DL\nGenerate a random password: GP\nExit the application:       EX \n")
-        short_code = input().lower()
+        short_code = input()
         print('\n')
 
-        if short_code == 'cp':
-                print('New Credential','underlined')
-                print('Account name ')
-                account_name=input()
-                print('Username ')
-                account_username=input()
+        if short_code == 'abcd':
+            print('New Credential','underlined')
+            print('Account name ')
+            name=input()
+            print('Username ')
+            account_username=input()
+            print('\n')
+            while True:
+            print("-Type your own password:   YP\n-Generate random Password: GP")
+            password_Choice = input()
+
+            if password_Choice == 'yp':
+             account_password = input("Enter Your Own Password\n")
+              break
+    
+            elif password_Choice == 'gp':
+             account_password = password_generates()
+              break
+           
+            else:
+                    print("Invalid password please try again")
+            
+        save_credentials(create_credentials(name,account_username,account_password))
+            print('\n')
+            print(f"Account Credential details:")
+             print('\n')
+            print(f"Account-name: {name}\nUsername: {account_username}\nPassword:{account_password}")
+            print('\n')
+            print(f"{acoount_username} what else do you want to do?")
+            print('\n')
+
+        elif short_code == "dc":
+            print('\n')
+            if display_all_credential():
+                print("These are your credential accounts: ")
                 print('\n')
-         
+                for name in display_all_credential():
+                    print(f"Account: {name.name} \n Username: {account_username}\n Password: {account_password}")
+                    print('\n')
+            else:
+                print("You don't have any credentials saved yet.....")
+                print('\n')        
+
+         elif short_code == "fc":
+            print()
+            print("Enter the username of the Credential you want to search for")
+            search_account_username = input()
+            if credential_exists(search_account_name):
+                search_credential = find_credential(search_account_username)
+                print('\n')
+                print(f"Account Name : {search_credential.name}")
+                print(f"Username: {search_credential.account_username}")
+                print(f"Password :{search_credential.account_password}")
+                print('\n')
+                print('\n')
+            else:
+                print("That Credential does not exist")
+                print('\n')        
+        
+        elif short_code == 'dl':
+            print('\n')
+            print("Enter the username of the Credential you want to delete")
+            search_username = input().lower()
+            if credential_exists(search_username):
+                search_credential = find_credential(search_username)
+                print("*"*50)
+                search_credential.delete_credentials()
+                print(f"{search_credential.username} stored credentials deleted")
+                print('*'*50)
+            else:
+                print("The Credential does not exist anymore in your store")
