@@ -26,6 +26,17 @@ class Credentials:
         '''
 
         Credentials.credentials_list.append(self)
+    
+    @classmethod
+    def verify_user(cls,username, password):
+        """
+        method to verify whether the user is our user_list or not
+        """
+        actual_user = ""
+        for user in User.user_list:
+            if(user.username == username and user.password == password):
+                actual_user == user.username
+        return actual_user    
 
     def delete_credential(self):
 
