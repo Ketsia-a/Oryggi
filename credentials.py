@@ -72,13 +72,6 @@ class Credentials:
         return password         
 
     @classmethod
-    def copy_password(cls,username):
-
-        credential_found = Credential.find_by_name(name)
-        pyperclip.copy(credential_found.password)
-                
-
-    @classmethod
     def credential_exist(cls,account_username):
         '''
          Method that checks if a credential exists from the credential list.
