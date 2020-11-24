@@ -42,12 +42,12 @@ def display_all_credential():
     """
     return Credentials.display_all_credential()
 
+
 def password_generates():
     """
     Function that generates a password for the user
     """
     return Credentials.password_generate()
-
 
 def delete_credential(credential):
     """
@@ -61,8 +61,8 @@ def find_credential(name):
     """
     return Credentials.find_by_name(name)
 
-def credential_exists(username):
+def credential_exists(acccount_username):
     """
     Function that checks if a credential exists and return true or false.
     """
-    return Credentials.credential_exist(username)
+    return Credentials.credential_exist(account_username)
