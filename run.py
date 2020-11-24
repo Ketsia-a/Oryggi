@@ -88,7 +88,28 @@ def main():
     save_users(create_users(username,password))
         print('\n')
         print(f"Hello {username}, Your account has been created succesfully!")
-        print(f"Your generated password is:{password}")
+        print(f"Your password is:{password}")
         print('\n')
-
-
+   
+     print("Enter your User name and your Password to log in:")
+        username = input("username: ")
+        password = input("password: ")
+        
+        
+        if login_users(username,password) == None:
+            print('\n')
+            print("Please try again")
+            print('\n')
+       
+        else:
+            login_users(username,password)
+            print('\n')
+            print(f"Hello {username}. Welcome To Oryggi")
+            print('\n')
+        
+    while True:
+        print("Use these short codes:")
+        print('\n')
+        print("To create a new credential:    NC\nDisplay Credentials:        DC\nFind a credential:          FC\nDelete credential:          DL\nGenerate a random password: GP\nExit the application:       EX \n")
+        short_code = input().lower()
+        print('\n')
