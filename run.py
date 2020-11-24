@@ -41,3 +41,28 @@ def display_all_credential():
     Function that displays all credentials
     """
     return Credentials.display_all_credential()
+
+def password_generates():
+    """
+    Function that generates a password for the user
+    """
+    return Credentials.password_generate()
+
+
+def delete_credential(credential):
+    """
+    Function to delete credentials
+    """
+    credentials.delete_credentials()
+
+def find_credential(name):
+    """
+    Function that finds in credential a account name and returns the credentials that matches that account name.
+    """
+    return Credentials.find_by_name(name)
+
+def credential_exists(username):
+    """
+    Function that checks if a credential exists and return true or false.
+    """
+    return Credentials.credential_exist(username)
