@@ -15,8 +15,9 @@ def save_users(user):
     """
     user.save_user()
 
-def display_users(user):
+
+def delete_users(user):
     """
-    Function to display saved user
+    Function to delete a user
     """
-    return User.display_user()
+    user.delete_user()
